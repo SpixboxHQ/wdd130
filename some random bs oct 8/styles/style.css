@@ -1,0 +1,37 @@
+body {
+    background-color: #292423;
+}
+header {
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: auto auto;
+    
+    background-color: dimgray;
+    box-shadow: 30px 30px;
+    margin-bottom: 15px;
+
+    h1 {
+        margin: auto 50px;
+    }
+}
+p {
+    text-align: right;
+    color: dimgray;
+}
+
+.main_thing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    img {
+        width: 600px;
+        margin: auto auto;
+    }
+}
+
+.stars {
+    img {
+        margin-left: 25%;
+        width: 50%;
+    }
+}

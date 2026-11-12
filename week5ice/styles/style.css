@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+body {
+    background-color: #FFECD7;
+}
+
+.card {
+    background-color: #008DB1;
+    width: 390px;
+    min-height: 800px;
+    max-height: 800px;
+    margin: auto auto;
+    border-radius: 25px;
+    border-color: #004E63;
+    border-width: 5px;
+    border-style: solid;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.card_contents {
+    text-align: center;
+    color: #fffffe;
+    font-size: 20px;
+}
+#sub_title {
+    color: #91e4fb;
+}
+#portrait {
+    border-width: 8px;
+    border-style: solid;
+    margin-top: 5px;
+    margin-bottom: -18px;
+}
+#quote {
+    color: #ffd783;
+    text-align: left;
+    margin-top: -5px;
+    font-family: "Nanum Brush Script", cursive;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+}
+ul {
+    text-align: left;
+    margin-left: 10%;
+    list-style-position: inside;
+    padding-left: 0px;
+    font-size: 24px;
+}
+h1 {
+    font-size: 55px;
+    margin-bottom: 0px;
+}
+a {
+    text-decoration: none;
+}
+#shameless_plug {
+    margin-left: 89%;
+    color: #e9d5be;
+}

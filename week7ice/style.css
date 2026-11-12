@@ -1,0 +1,94 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #eeeae2; color: white; font-family: Arial, Helvetica, sans-serif; }
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; min-height: 100vh; padding: 5vh 4vw; }
+.poster { position: relative; display: grid; min-height: 90vh; overflow: hidden; isolation: isolate; background: #27333a; }
+.poster-photo { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.chile-photo { background-image: linear-gradient(155deg, rgba(20,45,53,.18), rgba(20,45,53,.38)), url("https://images.unsplash.com/photo-1668052785861-a1e5bf4fcf3d?auto=format&fit=crop&w=1400&q=82"); background-color: #455d61; }
+.denmark-photo { background-image: linear-gradient(170deg, rgba(20,45,53,.08), rgba(20,45,53,.35)), url("https://images.unsplash.com/photo-1572438749634-04bb6b700376?auto=format&fit=crop&w=1400&q=82"); background-color: #40545b; }
+.finland-photo { background-image: linear-gradient(155deg, rgba(20,45,53,.08), rgba(20,45,53,.35)), url("https://images.unsplash.com/photo-1564857170582-80855988d55e?auto=format&fit=crop&w=1400&q=82"); background-color: #52716b; }
+.car-photo { background-image: linear-gradient(155deg, rgba(16,35,58,.18), rgba(16,35,58,.38)), url("https://unsplash.com/photos/m-b81gOjxv4/download?auto=format&fit=crop&w=1400&q=82"); background-color: #405d65; }.poster-photo::after { content: ""; position: absolute; inset: 0; opacity: .55; background: repeating-linear-gradient(125deg, transparent 0 40px, rgba(255,255,255,.12) 41px 44px, transparent 45px 90px); }
+.flag { position: absolute; z-index: 1; top: 8%; left: 50%; width: 100%; aspect-ratio: 3 / 2; transform: translateX(-50%) rotate(-5deg) scale(1.15); opacity: .62; filter: saturate(1.15); }
+.poster-overlay { position: absolute; z-index: 2; inset: 0; background: linear-gradient(transparent 35%, rgba(4,12,16,.9) 100%); }
+.poster-text { position: relative; z-index: 3; align-self: end; padding: 2rem; }
+.poster-text p, .poster-text small { margin: 0; text-transform: uppercase; letter-spacing: .2em; font-size: .72rem; }
+.poster-text h1 { margin: .5rem 0 .35rem; font-size: clamp(2rem, 4vw, 4.2rem); letter-spacing: .07em; }
+/* Students: add your flag elements and flag-specific grid rules below. */
+
+.flag-chile {
+    z-index: 9999;
+    background-color: #ffffff;
+    opacity: 0.8;
+    max-height: 280px;
+    padding: 0px;
+}
+
+.flag-chile .top-half {
+    background-color: #0000fe;
+    width: 40%;
+    margin: 0px;
+    height: 50%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.flag-chile .bottom-half {
+    background-color: #fe0000;
+    height: 50%;
+    margin: 0px;
+}
+
+/* HTML: <div class="star"></div> */
+.flag-chile .star {
+    margin: auto auto;
+    width: 90px;  
+    aspect-ratio: 1;
+    background: #ffffff;
+    clip-path: polygon(50% 0,
+    calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+    calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
+    ); 
+}
+
+.flag-denmark {
+    z-index: 9999;
+    background-color: #fe0000;
+    opacity: 0.8;
+}
+
+
+.flag-denmark .cross-vert {
+    background-color: #ffffff;
+    width: 8%;
+    height: 100%;
+    margin-left: 25%;
+}
+
+.flag-denmark .cross-hor {
+    background-color: #ffffff;
+    width: 100%;
+    height: 10%;
+    margin-top: -35%;
+}
+
+.flag-finland {
+    z-index: 9999;
+    background-color: #ffffff;
+    opacity: 0.8;
+}
+.flag-finland .cross-vert {
+    background-color: #0000fe;
+    width: 15%;
+    height: 100%;
+    margin-left: 25%;
+}
+.flag-finland .cross-hor {
+    background-color: #0000fe;
+    width: 100%;
+    height: 20%;
+    margin-top: -40%;
+}
+
+@media (max-width: 1100px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 650px) { .gallery { grid-template-columns: 1fr; } .poster { min-height: 70vh; } }

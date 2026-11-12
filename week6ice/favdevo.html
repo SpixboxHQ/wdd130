@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Favorite Devotionals</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-image">
+        <h1>My Favorite<br>Devotionals</h1>
+      </div>
+    </header>
+    <main>
+      <hr>
+      <div class="content-box">
+        <!-- Add your devotional content here -->
+          <table>
+            <tr>
+              <th>Speaker</th>
+              <th>Title</th>
+              <th>Location</th>
+              <th>Year</th>
+            </tr>
+            <tr class="gray">
+              <td>Elder Gerrit W Gong</td>
+              <td>The Lillies of the Field</td>
+              <td>Rexburg, Idaho</td>
+              <td>2024</td>
+            </tr>
+            <tr>
+              <td>Brother Gabriel W Reid</td>
+              <td>Fumbling is not Failing</td>
+              <td>Rexburg, Idaho</td>
+              <td>2024</td>
+            </tr>
+            <tr class="gray">
+              <td>President Alvin F Meredith III</td>
+              <td>Begin with the End in Mind</td>
+              <td>Rexburg, Idaho</td>
+              <td>2024</td>  
+            </tr>
+          </table>
+          <div class="user-form">
+            <h1>Have your own favorite?</h1>
+            <h3>Let us know!</h3>
+            <form action="">
+              <label for="input-speaker">Favorite Speaker:</label>
+              <input type="text" id="input-speaker" name="input-speaker" >
+              <label for="input-devo">Devo Title:</label>
+              <input type="text" name="input-devo" id="input-devo" >
+              <label for="input-location">Location:</label>
+              <input type="text" name="input-location" id="input-location" >
+              <label for="input-year">Year:</label>
+              <input type="text" name="input-year" id="input-year"><br>
+              <input type="submit" id="submit" value="Submit" class="submit-button">
+            </form>
+          </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
